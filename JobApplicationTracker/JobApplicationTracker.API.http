@@ -1,0 +1,38 @@
+@JobApplicationTracker.API_HostAddress = http://localhost:5086
+
+GET {{JobApplicationTracker.API_HostAddress}}/api/applications/
+Accept: application/json
+
+###
+
+GET {{JobApplicationTracker.API_HostAddress}}/api/applications/1
+Accept: application/json
+
+###
+
+POST {{JobApplicationTracker.API_HostAddress}}/api/applications
+Content-Type: application/json
+{ 
+    "jobTitle": "Software Engineer",
+    "companyName": "Tech Corp",
+    "applicationDate": "2023-10-01",
+    "status": "Applied",
+    "notes": "Applied through company website."
+}
+###
+
+
+PUT {{JobApplicationTracker.API_HostAddress}}/api/applications
+Content-Type: application/json
+{ 
+    "id": 1,
+    "jobTitle": "Software Engineer",
+    "companyName": "Tech Corp",
+    "applicationDate": "2023-10-01",
+    "status": "Applied",
+    "notes": "Applied through company website."
+}
+
+###
+
+DELETE {{JobApplicationTracker.API_HostAddress}}/api/applications/1
