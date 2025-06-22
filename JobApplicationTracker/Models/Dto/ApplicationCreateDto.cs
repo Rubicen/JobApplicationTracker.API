@@ -4,7 +4,7 @@ namespace JobApplicationTracker.API.Models.Dto
 {
     public class ApplicationCreateDto
     {
-        public string JobTitle { get; set; } = string.Empty;
+        public string Position { get; set; } = string.Empty;
 
         public string CompanyName { get; set; } = string.Empty;
 

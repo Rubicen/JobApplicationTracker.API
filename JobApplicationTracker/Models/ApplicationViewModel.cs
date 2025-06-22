@@ -1,7 +1,7 @@
 namespace JobApplicationTracker.API.Models
 {
     /// <summary>
-    /// Represents a view model for a job application, containing details such as the job title, company name, 
+    /// Represents a view model for a job application, containing details such as the position, company name, 
     /// application date, status, and additional notes.
     /// </summary>
     /// <remarks>This class is typically used to encapsulate and transfer data related to a job application.
@@ -14,9 +14,9 @@ namespace JobApplicationTracker.API.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the job title.
+        /// Gets or sets the position.
         /// </summary>
-        public string JobTitle { get; set; }
+        public string Position { get; set; }
 
         /// <summary>
         /// Gets or sets the Company Name.

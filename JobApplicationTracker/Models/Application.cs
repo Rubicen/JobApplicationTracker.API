@@ -1,7 +1,7 @@
 namespace JobApplicationTracker.API.Models
 {
     /// <summary>
-    /// Represents a job application, including details such as the job title, company name, application date, status,
+    /// Represents a job application, including details such as the position, company name, application date, status,
     /// and additional notes.
     /// </summary>
     public class Application
@@ -12,9 +12,9 @@ namespace JobApplicationTracker.API.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the job title.
+        /// Gets or sets the position.
         /// </summary>
-        public string JobTitle { get; set; }
+        public string Position { get; set; }
 
         /// <summary>
         /// Gets or sets the Company Name.

@@ -11,7 +11,7 @@ namespace JobApplicationTracker.API.Models.Mapper
             return new Application
             {
                 Id = entity.Id,
-                JobTitle = entity.JobTitle,
+                Position = entity.Position,
                 CompanyName = entity.CompanyName,
                 ApplicationDate = entity.ApplicationDate,
                 Status = (ApplicationStatus)entity.Status,
@@ -25,7 +25,7 @@ namespace JobApplicationTracker.API.Models.Mapper
             return new ApplicationEntity
             {
                 Id = model.Id,
-                JobTitle = model.JobTitle,
+                Position = model.Position,
                 CompanyName = model.CompanyName,
                 ApplicationDate = model.ApplicationDate,
                 Status = (int)model.Status,

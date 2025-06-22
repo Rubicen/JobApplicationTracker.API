@@ -33,7 +33,7 @@ namespace DatabaseContext.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("JobTitle")
+                    b.Property<string>("Position")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

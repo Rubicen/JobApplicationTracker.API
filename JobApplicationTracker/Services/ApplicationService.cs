@@ -44,7 +44,7 @@ namespace JobApplicationTracker.API.Services
             var existingEntity = await _context.Applications.FindAsync(application.Id);
             if (existingEntity == null)
                 throw new KeyNotFoundException($"Application with ID {application.Id} not found.");
-            existingEntity.JobTitle = application.JobTitle;
+            existingEntity.Position = application.Position;
             existingEntity.CompanyName = application.CompanyName;
             existingEntity.ApplicationDate = application.ApplicationDate;
             existingEntity.Status = (int)application.Status;

@@ -48,3 +48,9 @@ Swagger UI is available after running the API to test.
 There is also a unit test project included in the solution for testing the API endpoints.
 The data will need to be accurate for SwaggerUI to work correctly. This will mean Status of a matching
 enum value, and ID's matching data in the database.
+
+## Assumptions
+Using slightly tweaked naming due to felt easier to read
+Minimal ui, no user management, no authentication required
+Unit tests only covering functionality and not severe edge cases
+No user management, no authentication required

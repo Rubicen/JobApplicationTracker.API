@@ -11,7 +11,7 @@ namespace JobApplicationTracker.API.Models.Mapper
             return new Application
             {
                 // Id is not set here, it will be handled by the database AutoIncrement
-                JobTitle = dto.JobTitle,
+                Position = dto.Position,
                 CompanyName = dto.CompanyName,
                 ApplicationDate = dto.ApplicationDate,
                 Status = Enum.TryParse<ApplicationStatus>(dto.Status, out var status) ? status : throw new ArgumentException($"Invalid status value: {dto.Status}"),

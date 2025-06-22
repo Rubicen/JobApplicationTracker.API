@@ -13,7 +13,7 @@ Accept: application/json
 POST {{JobApplicationTracker.API_HostAddress}}/api/applications
 Content-Type: application/json
 { 
-    "jobTitle": "Software Engineer",
+    "position": "Software Engineer",
     "companyName": "Tech Corp",
     "applicationDate": "2023-10-01",
     "status": "Applied",
@@ -26,7 +26,7 @@ PUT {{JobApplicationTracker.API_HostAddress}}/api/applications
 Content-Type: application/json
 { 
     "id": 1,
-    "jobTitle": "Software Engineer",
+    "position": "Software Engineer",
     "companyName": "Tech Corp",
     "applicationDate": "2023-10-01",
     "status": "Applied",

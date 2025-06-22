@@ -33,8 +33,8 @@ namespace JobApplicationTracker.Tests
             // Arrange
             var applications = new List<Application>
             {
-                new Application { Id = 1, JobTitle = "Dev", CompanyName = "A" },
-                new Application { Id = 2, JobTitle = "QA", CompanyName = "B" }
+                new Application { Id = 1, Position = "Dev", CompanyName = "A" },
+                new Application { Id = 2, Position = "QA", CompanyName = "B" }
             };
             _serviceMock.Setup(s => s.GetAllApplicationsAsync()).ReturnsAsync(applications);
 
@@ -51,7 +51,7 @@ namespace JobApplicationTracker.Tests
         public async Task Get_ById_ReturnsApplication_WhenFound()
         {
             // Arrange
-            var application = new Application { Id = 1, JobTitle = "Dev", CompanyName = "A" };
+            var application = new Application { Id = 1, Position = "Dev", CompanyName = "A" };
             _serviceMock.Setup(s => s.GetApplicationByIdAsync(1)).ReturnsAsync(application);
 
             // Act
@@ -93,7 +93,7 @@ namespace JobApplicationTracker.Tests
             // Arrange
             var dto = new ApplicationCreateDto
             {
-                JobTitle = "Dev",
+                Position = "Dev",
                 CompanyName = "A",
                 ApplicationDate = DateTime.UtcNow,
                 Status = "Applied",
@@ -102,7 +102,7 @@ namespace JobApplicationTracker.Tests
             var model = new Application
             {
                 Id = 1,
-                JobTitle = dto.JobTitle,
+                Position = dto.Position,
                 CompanyName = dto.CompanyName,
                 ApplicationDate = dto.ApplicationDate,
                 Status = ApplicationStatus.Applied,
@@ -136,7 +136,7 @@ namespace JobApplicationTracker.Tests
             // Arrange
             var dto = new ApplicationCreateDto
             {
-                JobTitle = "Dev",
+                Position = "Dev",
                 CompanyName = "A",
                 ApplicationDate = DateTime.UtcNow,
                 Status = "InvalidStatus"
@@ -157,7 +157,7 @@ namespace JobApplicationTracker.Tests
             var dto = new ApplicationUpdateDto
             {
                 Id = 1,
-                JobTitle = "Dev",
+                Position = "Dev",
                 CompanyName = "A",
                 ApplicationDate = DateTime.UtcNow,
                 Status = "Applied",
@@ -166,7 +166,7 @@ namespace JobApplicationTracker.Tests
             var model = new Application
             {
                 Id = 1,
-                JobTitle = dto.JobTitle,
+                Position = dto.Position,
                 CompanyName = dto.CompanyName,
                 ApplicationDate = dto.ApplicationDate,
                 Status = ApplicationStatus.Applied,
@@ -201,7 +201,7 @@ namespace JobApplicationTracker.Tests
             var dto = new ApplicationUpdateDto
             {
                 Id = 1,
-                JobTitle = "Dev",
+                Position = "Dev",
                 CompanyName = "A",
                 ApplicationDate = DateTime.UtcNow,
                 Status = "InvalidStatus"
@@ -221,7 +221,7 @@ namespace JobApplicationTracker.Tests
             var dto = new ApplicationUpdateDto
             {
                 Id = 99,
-                JobTitle = "Dev",
+                Position = "Dev",
                 CompanyName = "A",
                 ApplicationDate = DateTime.UtcNow,
                 Status = "Applied"

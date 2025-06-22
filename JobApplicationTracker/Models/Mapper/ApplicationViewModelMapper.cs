@@ -10,7 +10,7 @@ namespace JobApplicationTracker.API.Models.Mapper
             return new Application
             {
                 Id = viewModel.Id,
-                JobTitle = viewModel.JobTitle,
+                Position = viewModel.Position,
                 CompanyName = viewModel.CompanyName,
                 ApplicationDate = viewModel.ApplicationDate,
                 Status = Enum.TryParse<ApplicationStatus>(viewModel.Status, out var status) ? status : ApplicationStatus.Applied,
@@ -24,7 +24,7 @@ namespace JobApplicationTracker.API.Models.Mapper
             return new ApplicationViewModel
             {
                 Id = application.Id,
-                JobTitle = application.JobTitle,
+                Position = application.Position,
                 CompanyName = application.CompanyName,
                 ApplicationDate = application.ApplicationDate,
                 Status = application.Status.ToString(),
